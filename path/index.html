@@ -15,14 +15,14 @@
   <p id="statusMessage"><b>statusMessage:</b> </p>
   <p id="decodedIDToken"><b>email:</b> </p>
 
-  <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
+  
   <script>
     // Query Params
     const queryString = decodeURIComponent(window.location.search);
     const params = new URLSearchParams(queryString);
     document.getElementById("param").append(params.get("param"));
   </script>
-  
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
   <script>
      async function getUserProfile() {
       const profile =  await liff.getProfile()
@@ -42,7 +42,7 @@
       getUserProfile()
      
       } else {
-        liff.login({ redirectUri: "https://blackhat71.github.io/Liff/path/"})
+        liff.login({ redirectUri: "https://blackhat71.github.io/path/"})
       }
       // createUniversalLink()
     }
